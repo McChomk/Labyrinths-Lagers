@@ -1,0 +1,39 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "io.github.mcchomk",
+		"id": "labyrinths_n_lagers",
+		"version": "${version}",
+		"metadata": {
+			"name": "Labyrinths & Lagers",
+			"description": "Mod that tweaks progression, while adding a tangible postgame.",
+			"contributors": {
+				"mcchomk": "Main Developer"
+			},
+			"contact": {
+				"homepage": "https://mcchomk.itch.io/"
+			},
+			"icon": "assets/labyrinths_n_lagers/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"entrypoints": {
+			"init": "io.github.mcchomk.labyrinths_n_lagers.LabyrinthsNLagers"
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.19.1"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=7.0.2"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.21"
+			}
+		]
+	},
+	"mixin": "labyrinths_n_lagers.mixins.json",
+	"accessWidener" : "labyrinths_n_lagers.accesswidener"
+}

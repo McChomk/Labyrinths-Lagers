@@ -1,0 +1,6 @@
+{
+  "parent": "labyrinths_n_lagers:item/handheld_spear",
+  "textures": {
+    "layer0": "labyrinths_n_lagers:item/golden_spear_hand"
+  }
+}

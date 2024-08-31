@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "copper_ingot",
+  "ingredients": [
+    {
+      "item": "minecraft:honeycomb"
+    },
+    {
+      "item": "labyrinths_n_lagers:crude_copper_ingot"
+    },
+    {
+      "item": "labyrinths_n_lagers:crude_copper_ingot"
+    },
+    {
+      "item": "labyrinths_n_lagers:crude_copper_ingot"
+    },
+    {
+      "item": "labyrinths_n_lagers:crude_copper_ingot"
+    }
+  ],
+  "result": {
+    "id": "minecraft:copper_ingot",
+    "count": 4
+  }
+}

@@ -1,0 +1,7 @@
+accessWidener v2 named
+
+accessible field net/minecraft/entity/player/PlayerEntity itemCooldownManager Lnet/minecraft/entity/player/ItemCooldownManager;
+accessible method net/minecraft/client/network/ClientPlayerEntity isUsingItem() Lnet/minecraft/client/network/ClientPlayerEntity/isUsingItem();
+accessible class net/minecraft/server/network/ServerPlayerEntity$C_edsacgfr
+accessible class net/minecraft/village/TradeOffers$EnchantBookFactory
+accessible class net/minecraft/blocks/PointedDripstoneBlock

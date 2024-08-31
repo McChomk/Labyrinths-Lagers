@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "gold_ingot",
+  "ingredients": [
+    {
+      "item": "minecraft:honeycomb"
+    },
+    {
+      "item": "labyrinths_n_lagers:crude_gold_ingot"
+    },
+    {
+      "item": "labyrinths_n_lagers:crude_gold_ingot"
+    },
+    {
+      "item": "labyrinths_n_lagers:crude_gold_ingot"
+    },
+    {
+      "item": "labyrinths_n_lagers:crude_gold_ingot"
+    }
+  ],
+  "result": {
+    "id": "minecraft:gold_ingot",
+    "count": 4
+  }
+}

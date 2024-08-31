@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "iron_ingot",
+  "ingredients": [
+    {
+      "item": "minecraft:honeycomb"
+    },
+    {
+      "item": "labyrinths_n_lagers:crude_iron_ingot"
+    },
+    {
+      "item": "labyrinths_n_lagers:crude_iron_ingot"
+    },
+    {
+      "item": "labyrinths_n_lagers:crude_iron_ingot"
+    },
+    {
+      "item": "labyrinths_n_lagers:crude_iron_ingot"
+    }
+  ],
+  "result": {
+    "id": "minecraft:iron_ingot",
+    "count": 4
+  }
+}

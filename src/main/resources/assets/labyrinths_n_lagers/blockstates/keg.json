@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "labyrinths_n_lagers:block/keg",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "labyrinths_n_lagers:block/keg"
+    },
+    "facing=south": {
+      "model": "labyrinths_n_lagers:block/keg",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "labyrinths_n_lagers:block/keg",
+      "y": 270
+    }
+  }
+}

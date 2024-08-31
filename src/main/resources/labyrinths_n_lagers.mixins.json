@@ -1,0 +1,26 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "io.github.mcchomk.labyrinths_n_lagers.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+      "TradeOffersMixin",
+      "PlayerMixin",
+      "ServerPlayerMixin",
+      "LivingEntityMixin"
+    ],
+	"client": [
+      "client.TitleScreenMixin",
+
+      "client.ClientPlayerMixin",
+      "client.MinecraftClientMixin",
+      "client.ItemRendererAccessor",
+      "client.ItemRendererMixin",
+      "client.ModelLoaderMixin"
+	],
+    "server": [
+    ],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
