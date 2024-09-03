@@ -14,8 +14,10 @@
   "item.labyrinths_n_lagers.golden_spear": "Golden Spear",
   "item.labyrinths_n_lagers.diamond_spear": "Diamond Spear",
   "item.labyrinths_n_lagers.netherite_spear": "Netherite Spear",
-  "item.labyrinths_n_lagers.mixed_potion" : "§fMixed Potion",
 
+  "item.labyrinths_n_lagers.mixed_potion" : "§fMixed Potion",
+  "item.labyrinths_n_lagers.mixed_potion_lore0" : "§8An elaborate concoction,",
+  "item.labyrinths_n_lagers.mixed_potion_lore1" : "§8made from multiple potions.",
 
   "block.labyrinths_n_lagers.keg": "Keg"
 }
