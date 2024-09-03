@@ -154,8 +154,8 @@ public class BrewingRecipeRegistryMixin
 		{
 			if (l.equals(effect1))
 			{
-				var amplifier = (effect1.getAmplifier() == effect2.getAmplifier() && effect1.getAmplifier() < 9) ? effect1.getAmplifier() + 1: Math.max(effect1.getAmplifier(), effect2.getAmplifier());
-				var duration = (int) Math.ceil((float) effect1.getDuration() * (1.0 - 0.5f) + ((float) effect2.getDuration() * 0.5f));
+				int amplifier = (effect1.getAmplifier() == effect2.getAmplifier() && effect1.getAmplifier() < 4) ? effect1.getAmplifier() + 1: Math.max(effect1.getAmplifier(), effect2.getAmplifier());
+				int duration = Math.max(effect1.getDuration(), effect2.getDuration());
 
 				component1 = component1.withEffect(new StatusEffectInstance(effect1.getEffectType(), duration, amplifier));
 			}
