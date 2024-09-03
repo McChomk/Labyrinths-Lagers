@@ -1,10 +1,10 @@
 {
-  "parent": "builtin/entity",
+	"credit": "Made with Blockbench",
 	"ambientocclusion": false,
 	"texture_size": [64, 64],
 	"textures": {
-      "2": "labyrinths_n_lagers:item/roller_buckler",
-      "particle": "labyrinths_n_lagers:item/roller_buckler"
+		"2": "labyrinths_n_lagers:item/roller_buckler",
+		"particle": "labyrinths_n_lagers:item/roller_buckler"
 	},
 	"elements": [
 		{
@@ -50,15 +50,10 @@
 			}
 		}
 	],
-  "overrides": [
-    {
-      "predicate": {
-        "labyrinths_n_lagers:blocking": 1
-      },
-      "model": "labyrinths_n_lagers:item/roller_buckler_blocking"
-    }
-  ],
 	"gui_light": "front",
+	"overrides": [
+		{"predicate": {"labyrinths_n_lagers:blocking": 1}, "model": "labyrinths_n_lagers:item/roller_buckler_blocking"}
+	],
 	"display": {
 		"thirdperson_righthand": {
 			"translation": [8, -2, 1]
@@ -69,7 +64,7 @@
 		},
 		"firstperson_righthand": {
 			"rotation": [0, 90, 0],
-			"translation": [-0.19, -1.51, -2.27]
+			"translation": [-0.19, -3.25, -2.27]
 		},
 		"firstperson_lefthand": {
 			"rotation": [0, -90, 0],
@@ -80,7 +75,8 @@
 			"scale": [0.6, 0.6, 0.6]
 		},
 		"gui": {
-			"rotation": [0, -90, 0],
+			"rotation": [0, -115, 11],
+			"translation": [-2, 1.25, 0],
 			"scale": [1, 0.8, 0.8]
 		},
 		"fixed": {

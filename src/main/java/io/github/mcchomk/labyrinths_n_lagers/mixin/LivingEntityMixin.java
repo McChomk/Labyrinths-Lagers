@@ -50,7 +50,7 @@ public abstract class LivingEntityMixin
 		{
 			Multimap<Holder<EntityAttribute>, EntityAttributeModifier> map = ImmutableMap.of(
 				EntityAttributes.GENERIC_ATTACK_SPEED,
-				new EntityAttributeModifier(Identifier.parse("generic.attack_speed"), -0.35f, EntityAttributeModifier.Operation.ADD_VALUE)
+				new EntityAttributeModifier(Identifier.parse("generic.attack_speed"), -0.4f, EntityAttributeModifier.Operation.ADD_VALUE)
 
 			).asMultimap();
 

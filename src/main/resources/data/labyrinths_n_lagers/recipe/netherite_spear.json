@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "base": {
+    "item": "labyrinths_n_lagers:diamond_spear"
+  },
+  "result": {
+    "count": 1,
+    "id": "labyrinths_n_lagers:netherite_spear"
+  },
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  }
+}
