@@ -1,0 +1,6 @@
+{
+  "parent": "labyrinths_n_lagers:item/handheld_parry",
+  "textures": {
+    "layer0": "labyrinths_n_lagers:item/diamond_rapier"
+  }
+}

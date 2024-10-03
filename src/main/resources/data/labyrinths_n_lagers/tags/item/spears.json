@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "labyrinths_n_lagers:wooden_spear",
+    "labyrinths_n_lagers:stone_spear",
+    "labyrinths_n_lagers:iron_spear",
+    "labyrinths_n_lagers:golden_spear",
+    "labyrinths_n_lagers:diamond_spear",
+    "labyrinths_n_lagers:netherite_spear"
+  ]
+}
+

@@ -1,0 +1,9 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "labyrinths_n_lagers:item/golden_rapier"
+  },
+  "overrides": [
+    {"predicate": {"labyrinths_n_lagers:parrying": 1}, "model": "labyrinths_n_lagers:item/golden_rapier_parrying"}
+  ]
+}

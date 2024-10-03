@@ -1,10 +1,7 @@
 package io.github.mcchomk.labyrinths_n_lagers.items.custom;
 
-import net.fabricmc.fabric.api.item.v1.EnchantingContext;
 import net.minecraft.block.BlockState;
 import net.minecraft.component.type.AttributeModifiersComponent;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.EquipmentSlotGroup;
 import net.minecraft.entity.LivingEntity;
@@ -14,7 +11,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolItem;
 import net.minecraft.item.ToolMaterial;
-import net.minecraft.registry.Holder;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -63,10 +59,5 @@ public class BasicWeaponItem extends ToolItem
 	public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
 		stack.damageEquipment(1, attacker, EquipmentSlot.MAINHAND);
 		return true;
-	}
-
-	@Override
-	public boolean canBeEnchantedWith(ItemStack stack, Holder<Enchantment> enchantment, EnchantingContext context) {
-		return (Enchantments.SWEEPING_EDGE != enchantment) && super.canBeEnchantedWith(stack, enchantment, context);
 	}
 }

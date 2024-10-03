@@ -1,17 +1,13 @@
 package io.github.mcchomk.labyrinths_n_lagers.mixin;
 
-import io.github.mcchomk.labyrinths_n_lagers.LabyrinthsNLagers;
 import net.minecraft.block.entity.BrewingStandBlockEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.BrewingRecipeRegistry;
 import net.minecraft.util.collection.DefaultedList;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(BrewingStandBlockEntity.class)
@@ -32,7 +28,11 @@ public class BrewingStandBlockEntityMixin
 
 			for(int i = 0; i < 3; ++i)
 			{
-				if (!slots.get(i).isEmpty()) canbrew = true;
+				if (!slots.get(i).isEmpty())
+				{
+					canbrew = true;
+					break;
+				}
 			}
 
 			cir.setReturnValue(canbrew);

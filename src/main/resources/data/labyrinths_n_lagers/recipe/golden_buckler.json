@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:gold_ingot"
+    },
+    "A": {
+      "item": "minecraft:armadillo_scute"
+    }
+  },
+  "pattern": [
+    "IAI",
+    "AAA",
+    "IAI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "labyrinths_n_lagers:golden_buckler"
+  }
+}

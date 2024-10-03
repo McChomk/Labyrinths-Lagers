@@ -1,10 +1,8 @@
 package io.github.mcchomk.labyrinths_n_lagers.items.custom;
 
-import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ShieldItem;
-import net.minecraft.registry.tag.ItemTags;
 
 import java.util.HashSet;
 
@@ -33,7 +31,7 @@ public class BasicShieldItem extends ShieldItem
 	public int getShieldCooldown() { return cooldown_ticks; }
 	public float getSpeedModifier() { return speed_modifier; }
 
-	public static float getBlocking(ItemStack itemStack, ClientWorld clientWorld, LivingEntity livingEntity, int i)
+	public static float getBlocking(ItemStack itemStack, LivingEntity livingEntity)
 	{
 		return livingEntity != null && livingEntity.isUsingItem() && livingEntity.getActiveItem() == itemStack ? 1.0F : 0.0F;
 	}

@@ -1,24 +1,15 @@
 package io.github.mcchomk.labyrinths_n_lagers.mixin;
 
-import io.github.mcchomk.labyrinths_n_lagers.LabyrinthsNLagers;
-import net.minecraft.component.DataComponentMap;
-import net.minecraft.component.DataComponentType;
+import io.github.mcchomk.labyrinths_n_lagers.Constants;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.LoreComponent;
 import net.minecraft.component.type.PotionContentsComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.potion.Potion;
 import net.minecraft.recipe.BrewingRecipeRegistry;
 
-import net.minecraft.registry.Holder;
 import net.minecraft.text.Text;
-import net.minecraft.util.math.Vec3d;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -51,12 +42,6 @@ public class BrewingRecipeRegistryMixin
 	)
 	void lnl$craft(ItemStack topInput, ItemStack bottomInput, CallbackInfoReturnable<ItemStack> cir)
 	{
-		List<Text> lines = List.of(
-			Text.literal(" "),
-			Text.translatable("item.labyrinths_n_lagers.mixed_potion_lore0"),
-			Text.translatable("item.labyrinths_n_lagers.mixed_potion_lore1"),
-			Text.literal(" "));
-
 		if (topInput.isOf(Items.LINGERING_POTION) && !bottomInput.isEmpty())
 		{
 			ItemStack itemStack = bottomInput.getItem().getDefaultStack();
@@ -85,7 +70,7 @@ public class BrewingRecipeRegistryMixin
 
 			itemStack.set(DataComponentTypes.POTION_CONTENTS, components);
 			itemStack.set(DataComponentTypes.CUSTOM_NAME, Text.translatable("item.labyrinths_n_lagers.mixed_potion"));
-			itemStack.set(DataComponentTypes.LORE, new LoreComponent(lines));
+			itemStack.set(DataComponentTypes.LORE, new LoreComponent(Constants.MIXED_POTION_LORE));
 			itemStack.set(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true);
 
 			cir.setReturnValue(itemStack);
@@ -115,7 +100,7 @@ public class BrewingRecipeRegistryMixin
 
 			itemStack.set(DataComponentTypes.POTION_CONTENTS, components);
 			itemStack.set(DataComponentTypes.CUSTOM_NAME, Text.translatable("item.labyrinths_n_lagers.mixed_potion"));
-			itemStack.set(DataComponentTypes.LORE, new LoreComponent(lines));
+			itemStack.set(DataComponentTypes.LORE, new LoreComponent(Constants.MIXED_POTION_LORE));
 			itemStack.set(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true);
 
 			cir.setReturnValue(itemStack);
@@ -145,7 +130,7 @@ public class BrewingRecipeRegistryMixin
 
 			itemStack.set(DataComponentTypes.POTION_CONTENTS, components);
 			itemStack.set(DataComponentTypes.CUSTOM_NAME, Text.translatable("item.labyrinths_n_lagers.mixed_potion"));
-			itemStack.set(DataComponentTypes.LORE, new LoreComponent(lines));
+			itemStack.set(DataComponentTypes.LORE, new LoreComponent(Constants.MIXED_POTION_LORE));
 			itemStack.set(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true);
 
 			cir.setReturnValue(itemStack);

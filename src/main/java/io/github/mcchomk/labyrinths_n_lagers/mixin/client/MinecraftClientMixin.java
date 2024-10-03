@@ -1,6 +1,5 @@
 package io.github.mcchomk.labyrinths_n_lagers.mixin.client;
 
-import io.github.mcchomk.labyrinths_n_lagers.items.custom.BasicShieldItem;
 import io.github.mcchomk.labyrinths_n_lagers.items.custom.SpearItem;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
@@ -40,7 +39,7 @@ public abstract class MinecraftClientMixin
 			shift = At.Shift.BEFORE
 		)
 	)
-	void spearShieldAttack(CallbackInfo ci)
+	void lnl$handleInputEvents(CallbackInfo ci)
 	{
 		assert player != null;
 		if (player.isUsingItem() && 0 >= attackCooldown)
@@ -57,10 +56,10 @@ public abstract class MinecraftClientMixin
 		at = @At("HEAD"),
 		cancellable = true
 	)
-	void spearInCooldown(CallbackInfoReturnable<Boolean> cir)
+	void lnl$doAttack(CallbackInfoReturnable<Boolean> cir)
 	{
 		assert player != null;
-		if (player.getMainHandStack().getItem() instanceof SpearItem && player.getItemCooldownManager() != null && player.getItemCooldownManager().getCooldownProgress(player.getMainHandStack().getItem(), 0.5f) > 0)
+		if ((player.getMainHandStack().getItem() instanceof SpearItem) && player.getItemCooldownManager() != null && player.getItemCooldownManager().getCooldownProgress(player.getMainHandStack().getItem(), 0.5f) > 0)
 		{
 			cir.setReturnValue(false);
 			cir.cancel();

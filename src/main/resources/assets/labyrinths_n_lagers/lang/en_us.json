@@ -6,7 +6,7 @@
 
   "item.labyrinths_n_lagers.olden_book": "Olden Book",
 
-  "item.labyrinths_n_lagers.roller_buckler": "Roller Buckler",
+  "item.labyrinths_n_lagers.golden_buckler": "Golden Buckler",
 
   "item.labyrinths_n_lagers.wooden_spear": "Wooden Spear",
   "item.labyrinths_n_lagers.stone_spear": "Stone Spear",
@@ -14,6 +14,40 @@
   "item.labyrinths_n_lagers.golden_spear": "Golden Spear",
   "item.labyrinths_n_lagers.diamond_spear": "Diamond Spear",
   "item.labyrinths_n_lagers.netherite_spear": "Netherite Spear",
+
+  "item.labyrinths_n_lagers.wooden_rapier": "Wooden Rapier",
+  "item.labyrinths_n_lagers.stone_rapier": "Stone Rapier",
+  "item.labyrinths_n_lagers.iron_rapier": "Iron Rapier",
+  "item.labyrinths_n_lagers.diamond_rapier": "Diamond Rapier",
+  "item.labyrinths_n_lagers.netherite_rapier": "Netherite Rapier",
+
+  "effect.labyrinths_n_lagers.spelunkin": "Spelunkin'",
+  "effect.labyrinths_n_lagers.recall": "Recall",
+
+  "item.minecraft.potion.effect.spelunkin": "Potion of Spelunkin'",
+  "item.minecraft.splash_potion.effect.spelunkin": "Splash Potion of Spelunkin'",
+  "item.minecraft.lingering_potion.effect.spelunkin": "Lingering Potion of Spelunkin'",
+  "item.minecraft.tipped_arrow.effect.spelunkin": "Arrow of Spelunkin'",
+
+  "item.minecraft.potion.effect.long_spelunkin": "Potion of Spelunkin'",
+  "item.minecraft.splash_potion.effect.long_spelunkin": "Splash Potion of Spelunkin'",
+  "item.minecraft.lingering_potion.effect.long_spelunkin": "Lingering Potion of Spelunkin'",
+  "item.minecraft.tipped_arrow.effect.long_spelunkin": "Arrow of Spelunkin'",
+
+  "item.minecraft.potion.effect.strong_spelunkin": "Potion of Spelunkin'",
+  "item.minecraft.splash_potion.effect.strong_spelunkin": "Splash Potion of Spelunkin'",
+  "item.minecraft.lingering_potion.effect.strong_spelunkin": "Lingering Potion of Spelunkin'",
+  "item.minecraft.tipped_arrow.effect.strong_spelunkin": "Arrow of Spelunkin'",
+
+  "item.minecraft.potion.effect.recall": "Potion of Recall",
+  "item.minecraft.splash_potion.effect.recall": "Splash Potion of Recall",
+  "item.minecraft.lingering_potion.effect.recall": "Lingering Potion of Recall",
+  "item.minecraft.tipped_arrow.effect.recall": "Arrow of Recall",
+
+  "item.minecraft.potion.effect.short_recall": "Potion of Recall",
+  "item.minecraft.splash_potion.effect.short_recall": "Splash Potion of Recall",
+  "item.minecraft.lingering_potion.effect.short_recall": "Lingering Potion of Recall",
+  "item.minecraft.tipped_arrow.effect.short_recall": "Arrow of Recall",
 
   "item.labyrinths_n_lagers.mixed_potion" : "§fMixed Potion",
   "item.labyrinths_n_lagers.mixed_potion_lore0" : "§8An elaborate concoction,",

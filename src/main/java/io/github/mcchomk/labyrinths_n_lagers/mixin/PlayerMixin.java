@@ -1,6 +1,5 @@
 package io.github.mcchomk.labyrinths_n_lagers.mixin;
 
-import io.github.mcchomk.labyrinths_n_lagers.items.ModItems;
 import io.github.mcchomk.labyrinths_n_lagers.items.custom.BasicShieldItem;
 import io.github.mcchomk.labyrinths_n_lagers.items.custom.SpearItem;
 import net.minecraft.entity.EntityType;
@@ -8,8 +7,8 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.ItemCooldownManager;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ToolMaterials;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stat;
 import net.minecraft.stat.Stats;
@@ -17,7 +16,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
-import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.*;
@@ -28,7 +26,7 @@ public abstract class PlayerMixin extends LivingEntity
 {
 
 	protected PlayerMixin(EntityType<? extends LivingEntity> entityType, World world) {
-		super(null, null);
+		super(entityType, world);
 	}
 
 	@Shadow
@@ -36,10 +34,6 @@ public abstract class PlayerMixin extends LivingEntity
 
 	@Shadow
 	public abstract ItemCooldownManager getItemCooldownManager();
-
-	@Shadow
-	@Final
-	private PlayerInventory inventory;
 
 	@Shadow
 	@NotNull
@@ -105,12 +99,11 @@ public abstract class PlayerMixin extends LivingEntity
 				if (this.getOffHandStack().isOf(basicShieldItem)) cooldown = basicShieldItem.getShieldCooldown();
 			}
 
-			this.getItemCooldownManager().set(ModItems.WOODEN_SPEAR, cooldown + 20);
-			this.getItemCooldownManager().set(ModItems.STONE_SPEAR, cooldown + 20);
-			this.getItemCooldownManager().set(ModItems.IRON_SPEAR, cooldown + 20);
-			this.getItemCooldownManager().set(ModItems.GOLDEN_SPEAR, cooldown - 10);
-			this.getItemCooldownManager().set(ModItems.DIAMOND_SPEAR, cooldown + 20);
-			this.getItemCooldownManager().set(ModItems.NETHERITE_SPEAR, cooldown + 20);
+			for (SpearItem spearItem : SpearItem.instances)
+			{
+				if (spearItem.getMaterial() == ToolMaterials.GOLD) this.getItemCooldownManager().set(spearItem, cooldown - 10);
+				else this.getItemCooldownManager().set(spearItem, cooldown + 20);
+			}
 		}
 	}
 }

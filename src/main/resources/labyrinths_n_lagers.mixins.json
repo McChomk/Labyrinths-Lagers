@@ -1,30 +1,29 @@
 {
-	"required": true,
-	"minVersion": "0.8",
-	"package": "io.github.mcchomk.labyrinths_n_lagers.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-      "TradeOffersMixin",
-
-      "BrewingRecipeRegistryMixin",
-      "BrewingStandBlockEntityMixin",
-
-      "PlayerMixin",
-      "ServerPlayerMixin",
-      "LivingEntityMixin"
-    ],
-	"client": [
-      "client.TitleScreenMixin",
-
-      "client.ClientPlayerMixin",
-      "client.MinecraftClientMixin",
-      "client.ItemRendererAccessor",
-      "client.ItemRendererMixin",
-      "client.ModelLoaderMixin"
-	],
-    "server": [
-    ],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.mcchomk.labyrinths_n_lagers.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "BrewingRecipeRegistryMixin",
+    "BrewingStandBlockEntityMixin",
+    "DripleafBlockMixin",
+    "LivingEntityMixin",
+    "PlayerMixin",
+    "ServerPlayerMixin",
+    "ServerPlayerRapierMixin",
+    "TradeOffersMixin"
+  ],
+  "client": [
+    "client.ClientPlayerMixin",
+    "client.ItemRendererAccessor",
+    "client.ItemRendererMixin",
+    "client.MinecraftClientMixin",
+    "client.ModelLoaderMixin",
+    "client.TitleScreenMixin"
+  ],
+  "server": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

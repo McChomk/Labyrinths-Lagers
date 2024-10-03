@@ -1,10 +1,9 @@
 {
-	"credit": "Made with Blockbench",
-	"ambientocclusion": false,
+  "ambientocclusion": false,
 	"texture_size": [64, 64],
 	"textures": {
-		"2": "labyrinths_n_lagers:item/roller_buckler",
-		"particle": "labyrinths_n_lagers:item/roller_buckler"
+		"2": "labyrinths_n_lagers:item/golden_buckler",
+		"particle": "labyrinths_n_lagers:item/golden_buckler"
 	},
 	"elements": [
 		{

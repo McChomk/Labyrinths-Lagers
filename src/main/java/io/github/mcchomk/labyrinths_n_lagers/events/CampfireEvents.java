@@ -1,10 +1,7 @@
 package io.github.mcchomk.labyrinths_n_lagers.events;
 
-import io.github.mcchomk.labyrinths_n_lagers.LabyrinthsNLagers;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.block.CampfireBlock;
-import net.minecraft.client.particle.EndRodParticle;
-import net.minecraft.particle.ParticleType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -12,7 +9,6 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
-import org.joml.Vector3f;
 
 public class CampfireEvents
 {
@@ -20,9 +16,10 @@ public class CampfireEvents
 	{
 		UseBlockCallback.EVENT.register((player, world, hand, hitResult) ->
 		{
-			BlockPos pos = hitResult.getBlockPos();
-
+			if (world.isClient()) return ActionResult.PASS;
 			if (!world.getDimension().bedWorks()) return ActionResult.PASS;
+
+			BlockPos pos = hitResult.getBlockPos();
 
 			if (player.isSneaking() && player.getMainHandStack().isEmpty() && player.getOffHandStack().isEmpty())
 			{
@@ -53,9 +50,10 @@ public class CampfireEvents
 							0.05
 					);
 
-					if (!world.isClient()) ((ServerPlayerEntity)player).setSpawnPoint(world.getRegistryKey(), pos, 0.0f, false, true);
+					((ServerPlayerEntity)player).setSpawnPoint(world.getRegistryKey(), pos, 0.0f, false, true);
+					player.swingHand(hand);
 
-					return ActionResult.SUCCESS;
+					return ActionResult.SUCCESS_NO_ITEM_USED;
 				}
 			}
 

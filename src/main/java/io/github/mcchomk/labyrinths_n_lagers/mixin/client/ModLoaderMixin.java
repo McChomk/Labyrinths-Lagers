@@ -35,12 +35,16 @@ abstract class ModelLoaderMixin
 			shift = At.Shift.AFTER
 		)
 	)
-	public void lnl$ModelLoader(BlockColors blockColors, Profiler profiler, Map modelResources, Map blockStateResources, CallbackInfo ci) throws IOException {
+	public void lnl$ModelLoader(BlockColors blockColors, Profiler profiler, Map modelResources, Map blockStateResources, CallbackInfo ci) throws IOException
+	{
 		this.addUnbakedModel(ModelIdentifier.inventory(Identifier.of(Constants.MOD_ID, "wooden_spear_hand")), loadModelFromJson(Identifier.of(Constants.MOD_ID, "item/wooden_spear_hand")));
 		this.addUnbakedModel(ModelIdentifier.inventory(Identifier.of(Constants.MOD_ID, "stone_spear_hand")), loadModelFromJson(Identifier.of(Constants.MOD_ID, "item/stone_spear_hand")));
 		this.addUnbakedModel(ModelIdentifier.inventory(Identifier.of(Constants.MOD_ID, "iron_spear_hand")), loadModelFromJson(Identifier.of(Constants.MOD_ID, "item/iron_spear_hand")));
 		this.addUnbakedModel(ModelIdentifier.inventory(Identifier.of(Constants.MOD_ID, "golden_spear_hand")), loadModelFromJson(Identifier.of(Constants.MOD_ID, "item/golden_spear_hand")));
 		this.addUnbakedModel(ModelIdentifier.inventory(Identifier.of(Constants.MOD_ID, "diamond_spear_hand")), loadModelFromJson(Identifier.of(Constants.MOD_ID, "item/diamond_spear_hand")));
 		this.addUnbakedModel(ModelIdentifier.inventory(Identifier.of(Constants.MOD_ID, "netherite_spear_hand")), loadModelFromJson(Identifier.of(Constants.MOD_ID, "item/netherite_spear_hand")));
+
+		this.addUnbakedModel(ModelIdentifier.inventory(Identifier.of(Constants.MOD_ID, "handheld_parry")), loadModelFromJson(Identifier.of(Constants.MOD_ID, "item/handheld_parry")));
+		this.addUnbakedModel(ModelIdentifier.inventory(Identifier.of(Constants.MOD_ID, "iron_rapier_parrying")), loadModelFromJson(Identifier.of(Constants.MOD_ID, "item/iron_rapier_parrying")));
 	}
 }
