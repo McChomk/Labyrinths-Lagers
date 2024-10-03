@@ -16,6 +16,7 @@ public class ModModelPredicates
 		ModelPredicateProviderRegistry.register(ModItems.WOODEN_RAPIER, Identifier.of(Constants.MOD_ID, "parrying"), RapierItem::getParrying);
 		ModelPredicateProviderRegistry.register(ModItems.STONE_RAPIER, Identifier.of(Constants.MOD_ID, "parrying"), RapierItem::getParrying);
 		ModelPredicateProviderRegistry.register(ModItems.IRON_RAPIER, Identifier.of(Constants.MOD_ID, "parrying"), RapierItem::getParrying);
+		ModelPredicateProviderRegistry.register(ModItems.GOLDEN_RAPIER, Identifier.of(Constants.MOD_ID, "parrying"), RapierItem::getParrying);
 		ModelPredicateProviderRegistry.register(ModItems.DIAMOND_RAPIER, Identifier.of(Constants.MOD_ID, "parrying"), RapierItem::getParrying);
 		ModelPredicateProviderRegistry.register(ModItems.NETHERITE_RAPIER, Identifier.of(Constants.MOD_ID, "parrying"), RapierItem::getParrying);
 	}

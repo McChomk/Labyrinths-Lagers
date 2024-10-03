@@ -14,8 +14,10 @@ import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterials;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.tag.DamageTypeTags;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -119,6 +121,20 @@ public abstract class ServerPlayerRapierMixin extends PlayerEntity implements IP
 				if (isEntity) entity.takeKnockback(0.5, this.getX() - entity.getX(), this.getZ() - entity.getZ());
 				else if (source.getSource() instanceof ProjectileEntity projectile) projectile.setVelocity(3f * projectile.getVelocity().x, 3f * projectile.getVelocity().y, 3f * projectile.getVelocity().z);
 
+				getServerWorld().spawnParticles(
+					(ServerPlayerEntity) ((PlayerEntity) this),
+					ParticleTypes.CRIT,
+					true,
+					this.getX() + getFacing().getOffsetX(),
+					this.getY() + getFacing().getOffsetY() + 1.66f,
+					this.getZ() + getFacing().getOffsetZ(),
+					3,
+					0.3,
+					0.3,
+					0.3,
+					0.04
+				);
+
 				lnl$setParryTime(-1);
 				this.playSound(SoundEvents.BLOCK_ANVIL_LAND, SoundCategory.PLAYERS, 4, 1);
 				return false;
@@ -142,6 +158,9 @@ public abstract class ServerPlayerRapierMixin extends PlayerEntity implements IP
 
 	@Shadow
 	public abstract void attack(Entity target);
+
+	@Shadow
+	public abstract ServerWorld getServerWorld();
 
 	@Unique
 	private void damageRapier(float amount)
